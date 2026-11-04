@@ -1,0 +1,12 @@
+{
+    "name": "mlbrgn/james",
+    "description": "Git hooks",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Pieter Hustinx",
+            "email": "pieter.hustinx@mlbrgn.nl"
+        }
+    ],
+    "require": {}
+}
