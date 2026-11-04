@@ -15,4 +15,4 @@ Add to `composer.json`
 ],
 ```
 
-Then `composer require pieter-mlbrgn-42/james`
+Then `composer require --dev pieter-mlbrgn-42/james`

@@ -10,11 +10,11 @@
     ],
     "require": {},
     "scripts": {
-        "post-install-cmd": [
+        "post-package-install": [
             "@php -r copy('hooks/pre-commit', '.git/hooks/pre-commit');",
             "@php -r copy('hooks/post-merge', '.git/hooks/post-merge');"
         ],
-        "post-update-cmd": [
+        "post-package-update": [
             "@php -r copy('hooks/pre-commit', '.git/hooks/pre-commit');",
             "@php -r copy('hooks/post-merge', '.git/hooks/post-merge');"
         ]
