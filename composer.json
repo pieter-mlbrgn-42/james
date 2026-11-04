@@ -8,5 +8,15 @@
             "email": "pieter.hustinx@mlbrgn.nl"
         }
     ],
-    "require": {}
+    "require": {},
+    "scripts": {
+        "post-install-cmd": [
+            "@php -r copy('hooks/pre-commit', '.git/hooks/pre-commit');",
+            "@php -r copy('hooks/post-merge', '.git/hooks/post-merge');"
+        ],
+        "post-update-cmd": [
+            "@php -r copy('hooks/pre-commit', '.git/hooks/pre-commit');",
+            "@php -r copy('hooks/post-merge', '.git/hooks/post-merge');"
+        ]
+    }
 }

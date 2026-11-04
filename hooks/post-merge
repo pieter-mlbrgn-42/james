@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# post-merge — React after a merge completes (e.g. restore file perms).
+# When: After `git merge` (or `git pull`) updates the worktree.
+# Args: $1 = 1 if it was a squash merge, else 0.
+# Exit: Exit status ignored.
+
+exit 0
