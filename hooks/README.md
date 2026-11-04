@@ -16,3 +16,10 @@ Add to `composer.json`
 ```
 
 Then `composer require --dev pieter-mlbrgn-42/james`
+
+And add also
+```json lines
+"post-update-cmd": [
+  "vendor/pieter-mlbrgn-42/james"
+],
+```
