@@ -4,4 +4,23 @@
 # Args: None. Operates on the staged (index) contents.
 # Exit: Non-zero aborts the commit.
 
+hooks=(
+    "composer audit"
+    "npm audit"
+    "composer validate --strict"
+    "composer test:pint"
+)
+
+for hook in "${hooks[@]}"; do
+    #echo $hook
+    msg=$(eval "$hook" 2>&1 >/dev/null)
+    status=$?
+    if [ $status -gt 0 ]; then
+        #echo "It's bad!"
+        echo $msg
+
+        exit $status
+    fi
+done
+
 exit 0
