@@ -2,6 +2,7 @@
     "name": "pieter-mlbrgn-42/james",
     "description": "Git hooks",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Pieter Hustinx",
