@@ -13,16 +13,13 @@ hooks=(
 
 for hook in "${hooks[@]}"; do
     echo $hook
-    eval "$hook" &>hook.out
+    msg=$(eval "$hook" 2>&1)
     status=$?
     if [ $status -gt 0 ]; then
-        cat hook.out
-        rm hook.out
+        echo $msg
 
         exit $status
     fi
 done
-
-rm hook.out
 
 exit 0
